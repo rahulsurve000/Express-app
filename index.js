@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyparser = require("body-parser");
+port = 5050;
 
 // stores the express module into the app variable!
 const app = express();
@@ -42,6 +43,6 @@ app.post("/", function (req, res) {
 });
 
 //this is used to listen a specific port!
-app.listen( process.env.PORT || 5050 ,function () {
-	console.log(`listening at port: 5050`);
+app.listen( process.env.PORT || port ,function () {
+	console.log(`listening at port: ${port}`);
 });
